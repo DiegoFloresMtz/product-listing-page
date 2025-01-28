@@ -22,7 +22,7 @@ export const SearchBar = ({ value, onChange }: SearchBarProps) => {
         <div className="relative">
             <div className={`flex items-center transition-all duration-300 ease-in-out ${isExpanded ? 'w-64' : 'w-10'}`}>
                 <div 
-                    className={`flex items-center bg-main rounded-md border border-gray-300 
+                    className={`flex items-center bg-white rounded-md border border-gray-300 
                     ${isExpanded ? 'w-full pl-3 pr-8' : 'px-2 w-fit h-10 relative justify-center cursor-pointer hover:bg-gray-50'}`}
                     onClick={() => !isExpanded && setIsExpanded(true)}
                 >
