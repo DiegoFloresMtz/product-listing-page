@@ -24,6 +24,7 @@
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Heroicons](https://heroicons.com/) - Icons
 - [JSON Server](https://github.com/typicode/json-server) - Mock API
+- [JEST](https://jestjs.io/) - Jest for Testing
 
 ## Installation 
 1. `npm install` - Install dependencies
