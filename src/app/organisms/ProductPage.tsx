@@ -81,7 +81,7 @@ export default function ProductPage() {
     }, [dispatch, sortBy, searchTerm]);
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-[#F5ECD5]">
             <Header />
             <main className="max-w-7xl mx-auto px-4 pt-24 pb-12">
                 <div className="flex gap-4 mb-10">
@@ -126,13 +126,13 @@ export default function ProductPage() {
                 )}
 
                 {!loading && !error && products.length === 0 && (
-                    <div className="text-black text-center py-8">
+                    <div className="text-secondary text-center py-8">
                         No products available.
                     </div>
                 )}
 
                 {/* Debug panel
-                <div className="fixed bottom-4 right-4 bg-black/75 text-white p-4 rounded text-sm space-y-1">
+                <div className="fixed bottom-4 right-4 bg-secondary/75 text-main p-4 rounded text-sm space-y-1">
                     <div>Page: {currentPage} / {totalPages}</div>
                     <div>Items: {products.length} / {totalItems}</div>
                     <div>Loading: {loading ? 'Yes' : 'No'}</div>

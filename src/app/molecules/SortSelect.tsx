@@ -9,7 +9,7 @@ export const SortSelect = ({ value, onChange }: SortSelectProps) => {
             <select
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
-                className="text-black h-fit w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none cursor-pointer"
+                className="text-secondary h-fit w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none cursor-pointer"
                 name="sort"
             >
                 <option value="title-asc">Name: A to Z</option>

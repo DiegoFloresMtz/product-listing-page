@@ -56,10 +56,10 @@ export const Header = () => {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <header className="fixed top-0 left-0 right-0 bg-secondary shadow-md z-50">
             <div className="container mx-auto px-4 py-4">
                 <div className="flex justify-between items-center">
-                    <h1 className="text-2xl font-bold text-black">Products</h1>
+                    <h1 className="text-2xl font-bold text-main">Products</h1>
                     
                     <div className="relative" ref={cartRef}>
                         <button
@@ -67,9 +67,9 @@ export const Header = () => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <ShoppingCartIcon className="text-black h-6 w-6" />
+                            <ShoppingCartIcon className="text-main h-6 w-6" />
                             {totalItems > 0 && (
-                                <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                <span className="absolute -top-2 -right-2 bg-main text-secondary text-xs rounded-full h-5 w-5 flex items-center justify-center">
                                     {totalItems}
                                 </span>
                             )}
@@ -77,7 +77,7 @@ export const Header = () => {
 
                         {showCart && (
                             <div 
-                                className="text-black absolute right-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 p-4"
+                                className="absolute right-0 mt-2 w-72 bg-secondary text-main rounded-lg shadow-lg border border-gray-200 p-4"
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -94,14 +94,14 @@ export const Header = () => {
                                                         height={500}
                                                     />
                                                     <div className="flex-1">
-                                                        <p className="text-sm font-medium truncate">{item.title}</p>
+                                                        <p className="text-sm font-medium truncate text-accent">{item.title}</p>
                                                         <div className="flex items-center justify-between">
                                                             <p className="text-xs text-gray-500">
                                                                 {item.quantity} × ${item.price.toFixed(2)}
                                                             </p>
                                                             <button 
                                                                 onClick={() => dispatch(decreaseQuantity(item.id))}
-                                                                className="text-red-500 text-xs hover:text-red-700"
+                                                                className="text-accent text-xs hover:text-red-700"
                                                             >
                                                                 Remove One
                                                             </button>
@@ -117,14 +117,14 @@ export const Header = () => {
                                             </div>
                                             <button 
                                                 onClick={() => dispatch(clearCart())}
-                                                className="mt-2 w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition-colors"
+                                                className="mt-2 w-full bg-accent text-main py-2 rounded hover:bg-red-600 transition-colors"
                                             >
                                                 Clear Cart
                                             </button>
                                         </div>
                                     </>
                                 ) : (
-                                    <p className="text-gray-500 text-center py-4">Your cart is empty</p>
+                                    <p className="text-main text-center py-4">Your cart is empty</p>
                                 )}
                             </div>
                         )}

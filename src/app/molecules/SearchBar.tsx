@@ -22,7 +22,7 @@ export const SearchBar = ({ value, onChange }: SearchBarProps) => {
         <div className="relative">
             <div className={`flex items-center transition-all duration-300 ease-in-out ${isExpanded ? 'w-64' : 'w-10'}`}>
                 <div 
-                    className={`flex items-center bg-white rounded-md border border-gray-300 
+                    className={`flex items-center bg-main rounded-md border border-gray-300 
                     ${isExpanded ? 'w-full pl-3 pr-8' : 'px-2 w-fit h-10 relative justify-center cursor-pointer hover:bg-gray-50'}`}
                     onClick={() => !isExpanded && setIsExpanded(true)}
                 >
@@ -36,7 +36,7 @@ export const SearchBar = ({ value, onChange }: SearchBarProps) => {
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         placeholder="Search products..."
-                        className={`text-black ml-2 focus:outline-none ${isExpanded ? 'w-full py-2' : 'w-0'} transition-all duration-300`}
+                        className={`text-secondary ml-2 focus:outline-none ${isExpanded ? 'w-full py-2' : 'w-0'} transition-all duration-300`}
                         onBlur={() => !inputValue && setIsExpanded(false)}
                     />
                 </div>
@@ -46,9 +46,9 @@ export const SearchBar = ({ value, onChange }: SearchBarProps) => {
                             setInputValue('');
                             setIsExpanded(false);
                         }}
-                        className="absolute right-2 text-black hover:text-gray-600"
+                        className="absolute right-10 text-secondary hover:text-gray-600"
                     >
-                        ✕
+                        Clear filter
                     </button>
                 )}
             </div>
